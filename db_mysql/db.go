@@ -47,7 +47,7 @@ func AddUser(u models.User)(int64, error){
 	psswordBytes := md5Hash.Sum(nil)
 	u.Password = hex.EncodeToString(psswordBytes)
 	//execute， .exe
-	result, err :=Db.Exec("insert into user(name,birthday,address,password)" +
+	result, err :=Db.Exec("insert into person(name,birthday,address,password)" +
 		" values(?,?,?,?) ", u.Name,u.Birthday,u.Address,u.Password)
 	if err != nil {
 		return -1,err
