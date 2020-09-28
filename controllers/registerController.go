@@ -28,7 +28,7 @@ func (r *RegisterController) Post(){
 		//r.Ctx.WriteString("")
 		result := models.Result{
 			Code:    0,
-			Message: "数据解析错误，请重试",
+			Message: "数据解析错误，请重新新尝试",
 			Data:    nil,
 		}
 		r.Data[`json`]=&result
