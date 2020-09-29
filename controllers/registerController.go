@@ -64,3 +64,4 @@ func (r *RegisterController) Post(){
 	return
 	//r.Ctx.WriteString("恭喜，注册用户信息成功")
 }
+//
