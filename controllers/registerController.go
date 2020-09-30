@@ -59,7 +59,7 @@ func (r *RegisterController) Post(){
 		Data:    user,
 	}
 	//json.mar
-	r.Data[`json`]=result
+	r.Data[`json`]=&result
 	r.ServeJSON()
 	return
 	//r.Ctx.WriteString("恭喜，注册用户信息成功")
