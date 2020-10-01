@@ -40,6 +40,7 @@ func (r *RegisterController) Post(){
 	row, err :=db_mysql.AddUser(user)
 	if err != nil {
 		//r.Ctx.WriteString("")
+		//fmt.Println(err)
 		result := models.Result{
 			Code:    2,
 			Message: "注册用户信息失败，请重试",
