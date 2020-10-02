@@ -58,3 +58,28 @@ func AddUser(u models.User)(int64, error){
 	}
 	return row,nil
 }
+func QueryUser(u models.User)(int64,error) {
+	rows,err :=Db.Query("select * from person where name = ?",u.Name )
+
+	 //fmt.Println(err)
+	 //fmt.Println(rows)
+
+	for rows.Next(){
+		var userid string
+		var username string
+		var birthday string
+		var address string
+		var password string
+		rows.Columns()
+		err = rows.Scan(&userid,&username,&birthday,&address,&password)
+		fmt.Println(userid,username,birthday)
+	}
+
+
+	if err!=nil {
+		return -1,err
+	}else {
+		return 1,nil
+	}
+
+}

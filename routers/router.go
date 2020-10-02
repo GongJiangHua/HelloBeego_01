@@ -10,4 +10,5 @@ func init() {
 	beego.Router("/register",&controllers.RegisterController{})
 	//http://127.0.0.1:8080
     beego.Router("/", &controllers.MainController{})
+	beego.Router("/queryuser",&controllers.QueryController{})
 }
