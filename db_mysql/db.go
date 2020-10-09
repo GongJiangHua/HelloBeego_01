@@ -75,6 +75,10 @@ func QueryUser(u models.User)(int64,error) {
 		u.Birthday=birthday
 		u.Address=address
 		u.Password=password
+		fmt.Println(u.Name)
+		fmt.Println(u.Password)
+		fmt.Println(u.Address)
+		fmt.Println(u.Password)
 		err = rows.Scan(&userid,&username,&birthday,&address,&password)
 		fmt.Println(userid,username,birthday)
 	}
